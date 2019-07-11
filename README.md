@@ -18,6 +18,12 @@ ng g lib libname
 ng g @nrwl/node:application demo
 ```
 
+创建 nest 项目
+
+```shell
+ng g @nrwl/nest:application demo
+```
+
 test
 
 ## 提交代码
