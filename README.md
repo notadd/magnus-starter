@@ -4,6 +4,16 @@
 | ------------------------------- | ------ | ------ | --- |
 | [utils](./libs/utils/README.md) | 工具包 | 整理中 |     |
 
+## 开始
+
+```
+npm install -g @notadd/magnus
+git clone https://github.com/notadd/magnus-starter.git demo
+cd demo
+yarn
+yarn start
+```
+
 ## cli
 
 创建名为`libname`的`lib`,存放在`libs`目录下
