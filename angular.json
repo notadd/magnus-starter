@@ -1,0 +1,149 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "utils": {
+      "root": "libs/utils",
+      "sourceRoot": "libs/utils/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/utils/tsconfig.lib.json",
+              "libs/utils/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/utils/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/utils/jest.config.js",
+            "tsConfig": "libs/utils/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "demo": {
+      "root": "apps/demo",
+      "sourceRoot": "apps/demo/src",
+      "projectType": "application",
+      "prefix": "demo",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/demo",
+            "main": "apps/demo/src/main.ts",
+            "tsConfig": "apps/demo/tsconfig.app.json",
+            "assets": ["apps/demo/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/demo/src/environments/environment.ts",
+                  "with": "apps/demo/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "demo:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/demo/tsconfig.app.json",
+              "apps/demo/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/demo/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/demo/jest.config.js",
+            "tsConfig": "apps/demo/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "basic": {
+      "root": "apps/basic",
+      "sourceRoot": "apps/basic/src",
+      "projectType": "application",
+      "prefix": "basic",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/basic",
+            "main": "apps/basic/src/main.ts",
+            "tsConfig": "apps/basic/tsconfig.app.json",
+            "assets": ["apps/basic/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/basic/src/environments/environment.ts",
+                  "with": "apps/basic/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "basic:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/basic/tsconfig.app.json",
+              "apps/basic/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/basic/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/basic/jest.config.js",
+            "tsConfig": "apps/basic/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/node"
+  },
+  "schematics": {},
+  "defaultProject": "demo"
+}

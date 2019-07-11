@@ -1,0 +1,6 @@
+{
+  "inputs": ["src/app/app.resolver.ts", "src/app/client.resolver.ts"],
+  "output": "src/assets/magnus",
+  "temp": "src/assets/temp",
+  "debug": true
+}
