@@ -35,3 +35,10 @@ git push
 上班之前
 git pull
 ```
+
+## 启动 magnsu
+
+```
+cd apps/basic
+magnus
+```
