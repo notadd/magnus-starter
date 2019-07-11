@@ -36,6 +36,12 @@ git push
 git pull
 ```
 
+## 安装 magnus
+
+```
+npm install -g @notadd/magnus
+```
+
 ## 启动 magnsu
 
 ```
