@@ -28,60 +28,6 @@
         }
       }
     },
-    "demo": {
-      "root": "apps/demo",
-      "sourceRoot": "apps/demo/src",
-      "projectType": "application",
-      "prefix": "demo",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@nrwl/node:build",
-          "options": {
-            "outputPath": "dist/apps/demo",
-            "main": "apps/demo/src/main.ts",
-            "tsConfig": "apps/demo/tsconfig.app.json",
-            "assets": ["apps/demo/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/demo/src/environments/environment.ts",
-                  "with": "apps/demo/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "demo:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/demo/tsconfig.app.json",
-              "apps/demo/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/demo/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/demo/jest.config.js",
-            "tsConfig": "apps/demo/tsconfig.spec.json"
-          }
-        }
-      }
-    },
     "basic": {
       "root": "apps/basic",
       "sourceRoot": "apps/basic/src",
@@ -145,5 +91,5 @@
     "defaultCollection": "@nrwl/node"
   },
   "schematics": {},
-  "defaultProject": "demo"
+  "defaultProject": "basic"
 }
