@@ -25,7 +25,9 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "commit": "yarn format && git add . && git-cz"
+    "commit": "yarn format && git add . && git-cz",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -42,7 +44,8 @@
     "grpc": "^1.22.0",
     "reflect-metadata": "^0.1.12",
     "workflow-es": "^2.3.5",
-    "workflow-es-mongodb": "^2.1.0"
+    "workflow-es-mongodb": "^2.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@angular/cli": "8.0.0",
@@ -63,5 +66,6 @@
     "tsconfig-paths": "^3.8.0",
     "tslint": "~5.11.0",
     "typescript": "~3.4.5"
-  }
+  },
+  "snyk": true
 }
