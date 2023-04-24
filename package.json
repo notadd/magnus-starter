@@ -35,7 +35,7 @@
     "@nestjs/graphql": "^6.2.4",
     "@nestjs/microservices": "^6.4.1",
     "@nestjs/platform-express": "^6.2.4",
-    "@notadd/magnus-core": "^1.0.5",
+    "@notadd/magnus-core": "^3.6.4",
     "@notadd/magnus-graphql": "^1.0.5",
     "@notadd/magnus-grpc": "^1.0.1",
     "@notadd/magnus-nest": "^1.0.6",
