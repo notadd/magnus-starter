@@ -30,7 +30,7 @@
   "private": true,
   "dependencies": {
     "@grpc/proto-loader": "^0.5.1",
-    "@nestjs/common": "^6.2.4",
+    "@nestjs/common": "^7.6.5",
     "@nestjs/core": "^6.2.4",
     "@nestjs/graphql": "^6.2.4",
     "@nestjs/microservices": "^6.4.1",
