@@ -39,7 +39,7 @@
     "@notadd/magnus-graphql": "^1.0.5",
     "@notadd/magnus-grpc": "^1.0.1",
     "@notadd/magnus-nest": "^1.0.6",
-    "grpc": "^1.22.0",
+    "grpc": "^1.24.11",
     "reflect-metadata": "^0.1.12",
     "workflow-es": "^2.3.5",
     "workflow-es-mongodb": "^2.1.0"
